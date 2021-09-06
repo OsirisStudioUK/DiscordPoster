@@ -1,0 +1,23 @@
+name: 'Discord Poster'
+description: 'Post an embed to Discord'
+inputs:
+  url:  # id of input
+    description: 'The Url to post to'
+    required: true
+    default: ''
+  repoInfo:
+    description: 'The repo information string'
+    required: true
+    default: '{}'
+  names:
+    description: 'A Translation table to make more readable names'
+    default: '{}'
+  username:
+    description: 'Username of the poster'
+    default: 'Discord Poster'
+  icon:
+    description: 'Icon for the avatar'
+    default: 'https://images-ext-1.discordapp.net/external/qgPGRvxvqQHizrUrtuNDNA1zZwbRZlIA4q-jvDavkvo/https/d301sr5gafysq2.cloudfront.net/ad1eb073189c/img/repo-avatars/default.png'
+runs:
+  using: 'node12'
+  main: 'index.js'
