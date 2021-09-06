@@ -26,7 +26,7 @@ try {
 				"color": 1624533, 
 				"timestamp": repoInfo.timestamp,
 				"author": {
-					"name": repoInfo.username,
+					"name": repoInfo.repo,
 					"url": icon,
 					"icon_url": icon
 				},
