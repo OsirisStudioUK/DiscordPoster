@@ -39,12 +39,8 @@ const axios = require('axios');
 try {
   
 // read the vars from action.yml
-	const repoInfo = core.getInput('repoInfo');
-	repoInfo = JSON.parse(repoInfo);
-
-	
-	const names = core.getInput('names');
-	names = JSON.parse(names);
+	const repoInfo = JSON.parse(core.getInput('repoInfo'));
+	const names = JSON.parse(core.getInput('names'));
 
 	const username = core.getInput('username');
 	const icon = core.getInput('icon');
