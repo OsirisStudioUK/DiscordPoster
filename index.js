@@ -3,39 +3,6 @@ const github = require('@actions/github');
 
 const axios = require('axios');
 
-/*
-
-	newMessage = {
-		"username": hookData["name"],
-		"content": "\n",
-		"embeds": [{
-				"color": 1624533,
-				"timestamp": message["timestamp"],
-				"author": {
-						"name": repoName,
-						"url": self.icon,
-						"icon_url": self.icon
-				},
-				"fields": [
-						{
-								"name": "Author",
-								"value": message["author"]["name"],
-								"inline": True
-						},
-						{
-								"name": "Branch",
-								"value":  branch,
-								"inline": True
-						},
-						{
-								"name": commitMessage[0],
-								"value": commitMessage[1]
-						}
-				]
-		}]
-*/
-
-
 try {
   
 // read the vars from action.yml
@@ -55,7 +22,8 @@ try {
 		"content": "\n",
 		"embeds": [
 			{
-				"color": 1624533,
+				// maybe add an option for this?
+				"color": 1624533, 
 				"timestamp": repoInfo.timestamp,
 				"author": {
 					"name": repoInfo.username,
@@ -66,12 +34,12 @@ try {
 					{
 						"name": "Author",
 						"value": authorName,
-						"inline": True
+						"inline": true
 					},
 					{
 						"name": "Branch",
 						"value":  repoInfo.branch,
-						"inline": True
+						"inline": true
 					},
 					{
 						"name": repoInfo.title,
